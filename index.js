@@ -57,11 +57,11 @@ const question = [
 ]
 
 const askQuestion = () => {
-    inquirer.prompt(question)
+    return inquirer.prompt(question)
     .then(answer => {
         employeeResponse.push(answer)
         if(answer.AddMoreTeamMember){
-            askQuestion()
+            return askQuestion()
         } else {
             return employeeResponse
         }
@@ -70,4 +70,4 @@ const askQuestion = () => {
 
 askQuestion()
     .then(employeeDetails => generateCard(employeeDetails))
-    // .then(html => fs.writeFile('./dist/index.html',html,(err)=> err && console.log(err)))
+    .then(html => fs.writeFile('./dist/index.html',html,(err)=> err && console.log(err)))

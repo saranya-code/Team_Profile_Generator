@@ -1,4 +1,3 @@
-const Employee= require("../lib/Employee");
 const Engineer= require("../lib/Engineer");
 const Intern= require("../lib/Intern");
 const Manager= require("../lib/Manager");
@@ -12,31 +11,36 @@ const generateCard = (employeeDetails) => {
            
         let newEmployeeDetails
         let additionDetails
+        let icon
 
         switch(role){
             case 'Manager':
-                newEmployeeDetails = new Manager(name,id,email,employeeDetail.officeNumber)
-                additionDetails = `Office Number: ${newEmployeeDetails.getOfficeNumber()}`
+                newEmployeeDetails = new Manager(name,id,email,employeeDetail.officeNumber);
+                additionDetails = `Office Number: ${newEmployeeDetails.getOfficeNumber()}`;
+                icon = '<i class="fas fa-mug-hot"></i>'
+                break;
             case 'Engineer':
-                newEmployeeDetails = new Engineer(name,id,email,employeeDetail.github)
-                additionDetails = `Github: ${newEmployeeDetails.gitHub()}`
+                newEmployeeDetails = new Engineer(name,id,email,employeeDetail.github);
+                additionDetails = `Github: ${newEmployeeDetails.gitHub()}`;
+                icon ='<i class="fas fa-glasses"></i>'
+                break;
             case 'Intern':
-                newEmployeeDetails = new Intern(name,id,email,employeeDetail.school)
-                additionDetails = `School: ${newEmployeeDetails.getSchool()}`
+                newEmployeeDetails = new Intern(name,id,email,employeeDetail.school);
+                additionDetails = `School: ${newEmployeeDetails.getSchool()}`;
+                icon ='<i class="fas fa-user-graduate"></i>'
+                break;
         }
-        cardTemplate += `<div class="container d-flex p-2 bd-highligh">
-        <div class="card">
-            <div class="card-body">
+        cardTemplate += `<div class="card">
+            <div class="card-body p-3 mb-2 bg-primary text-white">
                 <h5 class="card-title">${name}</h5>
-                <h6 class="card-text">${role}</h6>
+                <h6 class="card-text"> ${icon} ${role}</h6>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${id}</li>
                 <li class="list-group-item">EMail: ${email}</li>
                 <li class="list-group-item">${additionDetails}</li>
             </ul>
-        </div>
-    </div>`
+        </div>`
     });
     return `<!DOCTYPE html>
     <html lang="en">
@@ -47,14 +51,12 @@ const generateCard = (employeeDetails) => {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     </head>
         <body>
-            <div class="container-fluid justify-content-center">
-                <div class="row">
-                    <div class="col-12 bg-danger "> My Team</div>
-                </div>
+            <div class="container-fluid text-center bg-danger justify-content-center font-weight-bold p-4"> <h2>My Team </h2>
             </div>
-            ${cardTemplate}
+            <div class="container d-flex flex-wrap justify-content-center m-5">${cardTemplate}</div>
         </body>
     </body>
     </html>`
