@@ -47,12 +47,12 @@ To run the tests file
 
 ## Screenshot 
 
-    ![Webpage Screenshot](../assets/images/commandlinescreenshot.png?raw=true)
+![Webpage Screenshot](./assets/images/commandlinescreenshot.png?raw=true)
 
-    ![Webpage Screenshot](../assets/images/indexhtml.png?raw=true)
+![Webpage Screenshot](./assets/images/indexhtml.png?raw=true)
 
-    ![Webpage Screenshot](../assets/images/teamprofilegenerator.png?raw=true)
+![Webpage Screenshot](./assets/images/teamprofilegenerator.png?raw=true)
 
 ## Demo
 
-    ![Webpage Screenshot](../assets/images/team_profile_generator_demo.gif?raw=true)
+![Webpage Screenshot](./assets/images/team_profile_generator_demo.gif?raw=true)
