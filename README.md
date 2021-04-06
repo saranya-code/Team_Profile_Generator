@@ -56,3 +56,7 @@ To run the tests file
 ## Demo
 
 ![Webpage Screenshot](./assets/images/team_profile_generator_demo.gif?raw=true)
+
+## GITHUB repo URL
+
+* https://github.com/saranya-code/Team_Profile_Generator
