@@ -11,9 +11,9 @@
 
 ## Installation
 
-To insatall node npm package
+To install node npm package
 
-    npm i
+    npm install
 
 ## Usage
 
@@ -41,12 +41,18 @@ To run the tests file
 
 * https://getbootstrap.com/docs/4.6/components/list-group/
 
-* https://jestjs.io/docs/getting-started
-
 * https://jestjs.io/docs/api#describename-fn
 
 
 
 ## Screenshot 
 
-    ![Webpage Screenshot](./images/mainpage.png?raw=true)
+    ![Webpage Screenshot](./assets/images/commandlinescreenshot.png?raw=true)
+
+    ![Webpage Screenshot](./assets/images/indexhtml.png?raw=true)
+
+    ![Webpage Screenshot](./assets/images/teamprofilegenerator.png?raw=true)
+
+## Demo
+
+    ![Webpage Screenshot](./assets/images/team_profile_generator_demo.gif?raw=true)
