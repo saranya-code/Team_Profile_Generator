@@ -53,6 +53,10 @@ To run the tests file
 
 ![Webpage Screenshot](./assets/images/teamprofilegenerator.png?raw=true)
 
+![Webpage Screenshot](./assets/images/unit_test_screenshot.png?raw=true)
+
+![Webpage Screenshot](./assets/images/unit_test_screenshot1.png?raw=true)
+
 ## Demo
 
 ![Webpage Screenshot](./assets/images/team_profile_generator_demo.gif?raw=true)
